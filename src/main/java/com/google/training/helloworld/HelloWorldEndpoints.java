@@ -30,4 +30,12 @@ public class HelloWorldEndpoints {
     public HelloClass sayHelloByName (@Named("name") String name) {
         return new HelloClass(name);
     }
+    
+    @ApiMethod(name = "nameSize", path = "nameSize",
+            httpMethod = HttpMethod.GET)
+    public HelloClass nameSize (@Named("name") String name ) {
+        return new  HelloClass(name,true);
+    }
+    
+  
 }

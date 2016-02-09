@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/bZd9mUgIwrAeXORN8EOyweJ_oE0\"",
+ "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/FONUfFv3vA0P3PuXbQWneQyOSNY\"",
  "discoveryVersion": "v1",
  "id": "helloworldendpoints:v1",
  "name": "helloworldendpoints",
@@ -11,9 +11,9 @@
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
  "protocol": "rest",
- "baseUrl": "https://your-app-id.appspot.com/_ah/api/helloworldendpoints/v1/",
+ "baseUrl": "https://fluid-booking-121517.appspot.com/_ah/api/helloworldendpoints/v1/",
  "basePath": "/_ah/api/helloworldendpoints/v1/",
- "rootUrl": "https://your-app-id.appspot.com/_ah/api/",
+ "rootUrl": "https://fluid-booking-121517.appspot.com/_ah/api/",
  "servicePath": "helloworldendpoints/v1/",
  "batchPath": "batch",
  "parameters": {
@@ -82,6 +82,27 @@
   }
  },
  "methods": {
+  "nameSize": {
+   "id": "helloworldendpoints.nameSize",
+   "path": "nameSize",
+   "httpMethod": "GET",
+   "parameters": {
+    "name": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "name"
+   ],
+   "response": {
+    "$ref": "HelloClass"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
   "sayHello": {
    "id": "helloworldendpoints.sayHello",
    "path": "sayHello",

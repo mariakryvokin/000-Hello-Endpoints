@@ -42,18 +42,20 @@ function enableButtons () {
 	// Set the onclick action for the first button
 	btn = document.getElementById("input_greet_generically");
 	btn.onclick= function(){greetGenerically();};
-	
 	// Update the button label now that the button is active
 	btn.value="Click me for a generic greeting";
 	
 	// Set the onclick action for the second button
 	btn = document.getElementById("input_greet_by_name");
 	btn.onclick=function(){greetByName();};
-	
 	// Update the button label now that the button is active
 	btn.value="Click me for a personal greeting";
+	
+	btn = document.getElementById("nameSize");
+	btn.onclick= function(){nameSize();};
+	// Update the button label now that the button is active
+	btn.value="size of name";
 }
-
 /*
  * Execute a request to the sayHello() endpoints function
  */
@@ -78,6 +80,21 @@ function greetByName () {
 	// It takes one argument "name"
 	// On success, pass the response to sayHelloCallback()
 	var request = gapi.client.helloworldendpoints.sayHelloByName({'name': name});
+	
+	
+	request.execute(sayHelloCallback);
+}
+
+function nameSize () {
+	// Get the name from the name_field element
+	var name = document.getElementById("name_field").value;
+	
+	// Call the nameSize() function.
+	// It takes one argument "name"
+	// On success, pass the response to sayHelloCallback()
+	var request = gapi.client.helloworldendpoints.nameSize({'name': name});
+	
+	
 	request.execute(sayHelloCallback);
 }
 

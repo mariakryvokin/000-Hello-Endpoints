@@ -46,6 +46,27 @@
         "body" : "autoTemplate(backendResponse)"
       }
     },
+    "helloworldendpoints.nameSize" : {
+      "path" : "nameSize",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "replace this with your web client ID", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.training.helloworld.HelloWorldEndpoints.nameSize",
+      "request" : {
+        "parameters" : {
+          "name" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
     "helloworldendpoints.sayHello" : {
       "path" : "sayHello",
       "httpMethod" : "GET",
@@ -76,6 +97,11 @@
     },
     "methods" : {
       "com.google.training.helloworld.HelloWorldEndpoints.sayHelloByName" : {
+        "response" : {
+          "$ref" : "HelloClass"
+        }
+      },
+      "com.google.training.helloworld.HelloWorldEndpoints.nameSize" : {
         "response" : {
           "$ref" : "HelloClass"
         }
